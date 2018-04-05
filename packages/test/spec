@@ -1,0 +1,7 @@
+---
+name: test
+
+dependencies: []
+
+files:
+- basic_test.go

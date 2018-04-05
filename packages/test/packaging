@@ -1,0 +1,4 @@
+set -e
+
+cp basic_test.go ${BOSH_INSTALL_TARGET}/
+

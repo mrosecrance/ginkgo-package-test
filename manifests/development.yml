@@ -1,0 +1,30 @@
+---
+name: ginkgo-package-test
+
+releases:
+- name: ginkgo-package-test
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
+
+update:
+  canaries: 2
+  max_in_flight: 1
+  canary_watch_time: 5000-60000
+  update_watch_time: 5000-60000
+
+instance_groups:
+- name: ginkgo-package-test
+  azs: [z1]
+  instances: 1
+  jobs:
+  - name: ginkgo-test
+    release: ginkgo-package-test
+    properties: {}
+  vm_type: default
+  stemcell: default
+  networks:
+  - name: default

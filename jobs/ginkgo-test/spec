@@ -1,0 +1,10 @@
+---
+name: ginkgo-test
+
+templates:
+    run: bin/run.sh
+
+packages:
+- ginkgo
+
+properties: {}
